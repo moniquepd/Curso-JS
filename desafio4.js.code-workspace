@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "cursoyt"
+        },
+        {
+            "path": "..\\.."
+        }
+    ],
+    "settings": {
+        "totvsLanguageServer.welcomePage": false
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.confirm("Cálculo do Imposto de renda")
+var nome = window.prompt("Digite seu nome")
+var salario = window.prompt("Digite seu salário: R$")
+//salario.toLocaleString(pt-BR,{style:'currency',currency:'BRL'})
+
+const aliquota1 = 0.075
+const aliquota2 = 0.15
+const aliquota3 = 0.225
+const aliquota4 = 0.275
+
+
+if (salario<=1903.98){
+
+    document.write(`Olá, ${nome}! <br/><br/>`)
+    document.write(`Seu salário é de R$ ${salario}, não é necessário deduzir IRPF`)
+        
+}    else if (salario > 1903.98 && salario <= 2826.25) {
+        
+        const deducao1 = salario*aliquota1   
+    
+        document.write(`Olá, ${nome}! <br/><br/>`)
+        document.write(`Seu salário é de R$ ${salario}, alíquota de 7.5% e a parcela de IRPF é de R$ ${deducao1.toFixed(2)}`)
+
+    }
+    else if (salario > 2826.25 && salario <= 3751.05) {
+            
+        const deducao2 = salario*aliquota2
+    
+        document.write(`Olá, ${nome}! <br/><br/>`)
+        document.write(`Seu salário é de R$ ${salario}, alíquota de 15% e a parcela de IRPF é de R$ ${deducao2.toFixed(2)}`)
+        
+        }
+    else if (salario > 3751.05 && salario <= 4664.68) {
+            
+        const deducao3 = salario*aliquota3
+    
+        document.write(`Olá, ${nome}! <br/><br/>`)
+        document.write(`Seu salário é de R$ ${salario}, alíquota de 22,5% e a parcela de IRPF é de R$ ${deducao3.toFixed(2)}`)
+    
+        }
+    else if (salario > 4664.68) {
+            
+        const deducao4 = salario*aliquota3
+        
+        document.write(`Olá, ${nome}! <br/><br/>`)
+        document.write(`Seu salário é de R$ ${salario}, alíquota de 27.5% e a parcela de IRPF é de R$ ${deducao4.toFixed(2)}`)
+        
+        }      
+
+    </script>
+</body>
+</html>
